@@ -6,11 +6,10 @@ using namespace cv;
 void light_dark(double beta,char* image){
 Mat source;
 source = imread(image, IMREAD_COLOR);
-/*if(!source.data )
+if(!source.data )
     {
    printf( " No image data \n " );
-   return -1;
-    }*/
+    }
 Mat new_image;
 int y,x,c;
 new_image=Mat::zeros(source.rows,source.cols,source.type());

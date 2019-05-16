@@ -6,6 +6,10 @@ using namespace cv;
 void Canny_edge(int threshold,char* image){
 	Mat source,dest;
 	source = imread(image, IMREAD_COLOR);
+	if(!source.data )
+    {
+   printf( " No image data \n " );
+    }
 	Canny(source,dest,threshold,threshold*3,3);
 	namedWindow("Display Canny image", WINDOW_AUTOSIZE);
 	imshow("Display Canny image",dest);

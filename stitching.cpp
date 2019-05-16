@@ -22,25 +22,25 @@ Stitcher::Mode mode = Stitcher::PANORAMA;
 // Array for pictures 
 vector<Mat> imgs; 
   
-int main() 
+void Stitching(char* image_1,char* image_2) 
 { 
             // Read the ith argument or image  
             // and push into the image array 
-            Mat img1 = imread("im1.jpg"); 
-            if (img1.empty()) 
+            Mat img1 = imread(image_1); 
+            /*if (img1.empty()) 
             { 
                 // Exit if image is not present 
                 cout << "Can't read image '" << img1 << "'\n"; 
                 return -1; 
-            }
+            }*/
             imgs.push_back(img1); 
-            Mat img2 = imread("im2.jpg"); 
-            if (img2.empty()) 
+            Mat img2 = imread(image_2); 
+            /*if (img2.empty()) 
             { 
                 // Exit if image is not present 
                 cout << "Can't read image '" << img2 << "'\n"; 
                 return -1; 
-            } 
+            }*/ 
             imgs.push_back(img2); 
 
       
@@ -58,7 +58,7 @@ int main()
         // Check if images could not be stiched 
         // status is OK if images are stiched successfully 
         cout << "Can't stitch images\n"; 
-        return -1; 
+        
     } 
       
     // Store a new image stiched from the given  
@@ -68,6 +68,15 @@ int main()
     // Show the result 
     imshow("Result", pano); 
       
-    waitKey(0); 
-    return 0; 
+    waitKey(0);  
 } 
+int main(){
+    char* image_1 = new char[256];
+    char* image_2 = new char[256];
+    cout<<"choose an image"<<endl;
+    cin>>image_1;
+    cout<<"choose an image"<<endl;
+    cin>>image_2;
+    Stitching(image_1,image_2);
+    return 0;
+}

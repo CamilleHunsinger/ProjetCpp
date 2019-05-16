@@ -3,14 +3,36 @@
 using namespace std;
 using namespace cv;
 
-void Restruct(int size,char* image,int x){
+void restruct(int size,char* image,int x){
 	Mat source,dest;
 	source = imread(image, IMREAD_COLOR);
-	if(!source.data )
+	/*if(!source.data )
     {
    printf( " No image data \n " );
-   //return -1;
-    }
+   return -1;
+    }*/
+   //open the video file for reading
+    VideoCapture cap("chaplin.mp4");
+    // if not success, exit program
+  if(!cap.isOpened()){
+    cout << "Error opening video stream or file" << endl;
+    return -1;
+  }
+
+  //Define names of the window
+    namedWindow("Display restructed video", WINDOW_AUTOSIZE);
+
+    // read a new frame from video
+    while (true)
+    {
+        Mat frame;
+        cap >> frame;
+    
+    //Breaking the while loop at the end of the video
+     if(frame.data==0)
+      break;
+
+
 	Mat element=getStructuringElement(MORPH_RECT,Size(2*size+1,2*size+1),Point(size,size));
 	if (x==1){
 		erode(source,dest,element);
@@ -37,6 +59,6 @@ int main(){
 	char* image = new char[256];
 	cout<<"choose an image"<<endl;
 	cin>>image;
-	Restruct(size,image,x);
+	restruct(size,image,x);
 	return 0;
 }

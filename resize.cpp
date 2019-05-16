@@ -8,11 +8,10 @@ using namespace cv;
 Mat source, dest;
 // Read source image
 source = imread(image, IMREAD_COLOR);
-/*if(!source.data )
+if(!source.data )
     {
    printf( " No image data \n " );
-   return -1;
-    }*/
+    }
 resize(source,dest,Size(),scaleX,scaleY,INTER_LINEAR);
 namedWindow("Display resized image", WINDOW_AUTOSIZE);
 imshow("Display resized image",dest);
