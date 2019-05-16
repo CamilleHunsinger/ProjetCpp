@@ -3,7 +3,7 @@
 using namespace std;
 using namespace cv;
 
-void light_dark(double beta,char* image){
+void Light_dark(double beta,char* image){
 Mat source;
 source = imread(image, IMREAD_COLOR);
 if(!source.data )
@@ -36,6 +36,6 @@ int main(){
 	double beta;
 	cout<<"choose your brightness factor"<<endl;
 	cin>>beta;
-	light_dark(beta,image);
+	Light_dark(beta,image);
 	return 0;
 }
