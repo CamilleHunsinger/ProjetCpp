@@ -1,5 +1,6 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include "stitching.h"
 
 // CPP program to Stitch 
 // input images (panorama) using OpenCV  

@@ -1,5 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include "brightness.h"
+
 using namespace std;
 using namespace cv;
 

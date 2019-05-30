@@ -1,5 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include "canny.h"
+
 using namespace std;
 using namespace cv;
 
@@ -15,6 +17,7 @@ void Canny_edge(int threshold,char* image){
 	imshow("Display Canny image",dest);
 	waitKey(0);
 }
+
 int main(){
 	char* image = new char[256];
 	int threshold;

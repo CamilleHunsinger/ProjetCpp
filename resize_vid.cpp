@@ -1,5 +1,6 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include "resize_vid.h"
 
 using namespace std;
 using namespace cv;
