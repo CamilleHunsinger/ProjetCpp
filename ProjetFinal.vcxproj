@@ -22,19 +22,23 @@
     <ClInclude Include="brightness.h" />
     <ClInclude Include="bright_vid.h" />
     <ClInclude Include="canny.h" />
+    <ClInclude Include="canny_vid.h" />
     <ClInclude Include="resize.h" />
     <ClInclude Include="resize_vid.h" />
     <ClInclude Include="restruct.h" />
+    <ClInclude Include="restruct_vid.h" />
     <ClInclude Include="stitching.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="brightness.cpp" />
     <ClCompile Include="bright_vid.cpp" />
     <ClCompile Include="canny.cpp" />
+    <ClCompile Include="canny_vid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resize.cpp" />
     <ClCompile Include="resize_vid.cpp" />
     <ClCompile Include="restruct.cpp" />
+    <ClCompile Include="restruct_vid.cpp" />
     <ClCompile Include="stitching.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

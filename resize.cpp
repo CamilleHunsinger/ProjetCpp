@@ -13,6 +13,7 @@ void Resize(double scaleX, double scaleY, char* image) {
 	{
 		printf(" No image data \n ");
 	}
+
 	resize(source, dest, Size(), scaleX, scaleY, INTER_LINEAR);
 	namedWindow("Display resized image", WINDOW_AUTOSIZE);
 	imshow("Display resized image", dest);

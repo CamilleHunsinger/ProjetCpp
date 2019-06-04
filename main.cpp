@@ -7,6 +7,9 @@
 #include "resize_vid.h"
 #include "restruct.h"
 #include "stitching.h"
+#include "canny_vid.h"
+#include "restruct_vid.h"
+
 
 
 using namespace std;
@@ -16,16 +19,16 @@ int main() {
 
 	
 	
-	void Light_dark_vid(char* video, double beta);
+	//void Light_dark_vid(char* video, double beta);
 
-		char* video = new char[256];
-		cout << "choose a video" << endl;
-		cin >> video;
-		double beta;
-		cout << "choose your brightness factor" << endl;
-		cin >> beta;
-		Light_dark_vid(video, beta);
-		return 0;
+	//	char* video = new char[256];
+	//	cout << "choose a video" << endl;
+	//	cin >> video;
+	//	double beta;
+	//	cout << "choose your brightness factor" << endl;
+	//	cin >> beta;
+	//	Light_dark_vid(video, beta);
+	//	return 0;
 
 	
 
@@ -53,17 +56,17 @@ int main() {
 	//	return 0;
 
 
-	//void Resize(double scaleX, double scaleY, char* image);
+	//void Resize(double scalex, double scaley, char* image);
 
 	//	char* image = new char[256];
-	//	double scaleX,scaleY;
+	//	double scalex,scaley;
 	//	cout<<"choose an image"<<endl;
 	//	cin>>image;
-	//	cout<<"modify scaleX"<<endl;
-	//	cin>>scaleX;
-	//	cout<<"modify scaleY"<<endl;
-	//	cin>>scaleY;
-	//	Resize(scaleX,scaleY,image);
+	//	cout<<"modify scalex"<<endl;
+	//	cin>>scalex;
+	//	cout<<"modify scaley"<<endl;
+	//	cin>>scaley;
+	//	Resize(scalex,scaley,image);
 	//	return 0;
 
 	//void Resize_vid(char* video, double scaleX, double scaleY);
@@ -103,7 +106,31 @@ int main() {
 	//    Stitching(image_1,image_2);
 	//    return 0;
 
+	//void Canny_vid(int threshold, char* video);
 
-	//waitKey(0);
+	//	char* video = new char[256];
+	//	int threshold;
+	//	cout<<"choose an video"<<endl;
+	//	cin>>video;
+	//	cout<<"choose threshold"<<endl;
+	//	cin>>threshold;
+	//	Canny_vid(threshold,video);
+	//	return 0;
+
+	void Restruct_vid(int size, char* video, int x);
+
+		int size,x;
+		char* video = new char[256];
+		cout<<"choose if you want to erode(1) or dilate(2)"<<endl;
+		cin>>x;
+		cout<<"choose a size"<<endl;
+		cin>>size;
+		cout<<"choose a video"<<endl;
+		cin>>video;
+		Restruct_vid(size,video,x);
+		return 0;
+
+
+	waitKey(0);
 
 }
